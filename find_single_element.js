@@ -53,4 +53,19 @@ function find_single_element_xor(arr) {
     return res;
 }
 
-console.log(find_single_element_xor(ar))
+console.log(find_single_element_xor(ar));
+
+function find_single_element_math(arr) {
+    let sum1 = 0;
+    let sum2 = 0;
+    let set = new Set(arr);
+    sum1 = [...set].reduce((a, b) => a+b, 0);
+    sum2 = arr.reduce((a,b) => a+b, 0);
+    return 2*sum1 - sum2;
+}
+let a=[7, 3, 5, 4, 5, 3, 4];
+
+let b=[15, 18, 16, 18, 16, 15, 89];
+console.log(find_single_element_math(ar))
+console.log(find_single_element_math(a))
+console.log(find_single_element_math(b))
